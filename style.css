@@ -1,9 +1,18 @@
 body {
     font-size: 14px;
     background-color: black;
-    background-image: url("stars3.gif");
+    background-image: url("stars.gif");
     background-repeat: repeat;
     color: white;
+}
+#loading-element {
+  display: flex;
+  position: absolute;
+  height: 600px;
+  bottom: 61px;
+  width: 407px;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -52,23 +61,33 @@ h1 {
     0 0 55px #250846;
 }
 
+h5 {
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 0.75rem;
+    position: relative;
+    top: -30px;
 
+}
+simple-loader {
+  filter: brightness(2);
+}
 .flexcont {
     display: flex;
     width: 100%;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     align-items: center;
 }
 
 .specs {
     position: relative;
-    top: -92.5px;
+    top: -90px;
     display: flex;
     flex-direction: row;
     width: 407px;
     justify-content: center;
-    margin: 5px;
     justify-content: space-evenly;
 }
 
@@ -79,33 +98,60 @@ h1 {
 
 #button {
     position: relative;
-    top: -50px;
+    top: -35px;
 }
 
-.button-54 {
+.button {
   font-family: 'VT323', monospace;
-  font-size: 22px;
+  font-size: 23px;
   text-decoration: none;
+  background-image: url("stars.gif");
   text-transform: uppercase;
-  color: #582b80;
+  color: #65368d;
   cursor: pointer;
   border: 3px solid;
   padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 3px 4px 0px 0px, 3px 3px 0px 0px;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 3px 3px 0px 0px, 3px 3px 0px 0px;
   position: relative;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-
-.button-54:active {
+#cat-container {
+    width: 407px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0px;
+}
+.button:active {
   box-shadow: 0px 0px 0px 0px;
   top: 5px;
   left: 5px;
 }
 
 @media (min-width: 768px) {
-  .button-54 {
+  .button {
     padding: 0.25em 0.75em;
   }
 }
+
+a:link {
+    color: #d2b1e2;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #d4b4e3;
+    text-decoration: none;
+  }

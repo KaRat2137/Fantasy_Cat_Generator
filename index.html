@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;300;400;500;600&family=Pirata+One&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;300;400;500;600&family=Pirata+One&family=VT323&display=swap" rel="stylesheet" crossorigin="anonymous">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fantasy Cat Generator</title>
@@ -16,20 +16,26 @@
     <h1>Fantasy Cat Generator</h1>
 
     <div class="flexcont">
-        <canvas height="844" width="573" id="cat-canvas"></canvas>
-        <div id="cat"></div>
-    
-        <article class="specs">
-            <div id="catclass"></div>
-    
-            <div id="catrace"></div>
-        </article>
+        <div id="cat-container">
+            <canvas height="844" width="573" id="cat-canvas"></canvas>
+            <div id="cat"></div>
+            <article class="specs">
+                <div id="catclass"></div>
+                <div id="catrace"></div>
+            </article>
+        </div>
+        <div id="loading-element" style="opacity: 0">
+            <simple-loader></simple-loader>
+        </div>
 
     </div>
 
-    <div class="flexcont" id="button">
-        <button class="button-54" role="button">Generate</button>
+    <div class="flexcont" id="button" style="flex-direction: row;">
+        <button class="button" role="button" id="download-button" style="margin-right: 20px;">Download Image</button>
+        <button class="button" role="button" id="generate-button">Generate</button>
     </div>
+
+    <h5>Copyright <a href="https://github.com/KaRat2137" target="_blank">Karolina Ratajczyk</a> 2023</h5>
 
     <script src="script.js" type="module">
     </script>

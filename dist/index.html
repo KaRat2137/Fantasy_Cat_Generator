@@ -2,18 +2,43 @@
 <html lang="en">
 <head>
     
+
+    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Kings&display=swap" rel="stylesheet">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  <script type="module" crossorigin src="/assets/index-14dc99c2.js"></script>
-  <link rel="stylesheet" href="/assets/index-20523f98.css">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;300;400;500;600&family=Pirata+One&family=VT323&display=swap" rel="stylesheet" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Cat Generator</title>
+  <script type="module" crossorigin src="/assets/index-7f83a8b6.js"></script>
+  <link rel="stylesheet" href="/assets/index-3be36058.css">
 </head>
 <body>
-    <div id="cat"></div>
-    <div id="catclass"></div>
-    <div id="catrace"></div>
+    <h1>Fantasy Cat Generator</h1>
+
+    <div class="flexcont">
+        <div id="cat-container">
+            <canvas height="844" width="573" id="cat-canvas"></canvas>
+            <div id="cat"></div>
+            <article class="specs">
+                <div id="catclass"></div>
+                <div id="catrace"></div>
+            </article>
+        </div>
+        <div id="loading-element" style="opacity: 0">
+            <simple-loader></simple-loader>
+        </div>
+
+    </div>
+
+    <div class="flexcont" id="button" style="flex-direction: row;">
+        <button class="button" role="button" id="download-button" style="margin-right: 20px;">Download Image</button>
+        <button class="button" role="button" id="generate-button">Generate</button>
+    </div>
+
+    <h5>Copyright <a href="https://github.com/KaRat2137" target="_blank">Karolina Ratajczyk</a> 2023</h5>
+
     
 </body>
 <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
