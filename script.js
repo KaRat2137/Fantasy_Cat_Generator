@@ -23,6 +23,9 @@ if(isSafariBrowser()) {
 function generate() {
     reset()
     cat = makeCat()
+
+// backgrounds
+
     if (cat.origin[2].trim() == 'Desert') 
     queue.push("images/backgrounds/Desert.png")
     if (cat.origin[2].trim() == 'Swamp') 
@@ -48,18 +51,29 @@ function generate() {
     if (cat.origin[2].trim() == 'Ranch') 
     queue.push("images/backgrounds/Ranch.png")
 
+// cat shadow
+
     queue.push("images/shadow.png")
+
+// objects behind the back
 
     if (cat.class == 'Archer') 
     queue.push("images/classes//Archer_bow.png")
+    if (cat.class == 'Cowcat') 
+    queue.push("images/classes//Cowcat_lasso.png")
     if (cat.class == 'Witcher') 
     queue.push("images/classes//Witcher_swords.png")
     if (cat.class == 'Bard') 
     queue.push("images/classes//Bard.png")
     if (cat.class == 'Warrior') 
-    queue.push("images/classes//Warrior.png")
+    queue.push(`images/classes/Warrior_${randomNumber(3) + 1}.png`)
     if (cat.class == 'Healer') 
-    queue.push(`images/classes/Healer_band_${randomNumber(2) + 1}.png`)
+    queue.push(`images/classes/Healer_flowers_${randomNumber(2) + 1}.png`)
+
+    if (cat.race == 'Fairy') 
+    queue.push(`images/races/Fairy_${randomNumber(5) + 1}.png`)
+
+// skins
 
     if (cat.colour == 'White') 
     queue.push("images/body/skin_01.png")
@@ -71,22 +85,31 @@ function generate() {
     queue.push("images/body/skin_04.png")
     if (cat.colour == 'Light brown') 
     queue.push("images/body/skin_05.png")
+    if (cat.colour == 'Purple') 
+    queue.push("images/body/skin_06.png")
+    if (cat.colour == 'Blue') 
+    queue.push("images/body/skin_07.png")
+    if (cat.colour == 'Green') 
+    queue.push("images/body/skin_08.png")
 
-    queue.push(`images/body/spot_${randomNumber(15) + 1}.png`)
+// spots
 
-    queue.push(`images/body/marking_${randomNumber(5) + 1}.png`)
+    queue.push(`images/body/spot_${randomNumber(17) + 1}.png`)
+
+// special markings
+
+    queue.push(`images/body/marking_${randomNumber(13) + 1}.png`)
+
+// outline and face elements
 
     queue.push("images/body/outline.png")
     queue.push(`images/body/eye_colour_${randomNumber(17) + 1}.png`)
-    queue.push(`images/body/eye_shape_${randomNumber(10) + 1}.png`)
+    queue.push(`images/body/eye_shape_${randomNumber(14) + 1}.png`)
     queue.push("images/body/mouth.png")
     queue.push(`images/body/mouth_add_0${randomNumber(4) + 1}.png`)
 
-    if (cat.class == 'Berserker') 
-    queue.push("images/classes//Berserker.png")
+// races
 
-    if (cat.race == 'Fairy') 
-    queue.push("images/races//Fairy.png")
     if (cat.race == 'Lynx') 
     queue.push("images/races//Lynx.png")
     if (cat.race == 'Vulcan') 
@@ -105,15 +128,21 @@ function generate() {
     queue.push("images/races//Elf_black.png")
     if (cat.race == 'Elf' && cat.colour == 'Light brown')
     queue.push("images/races//Elf_brown_light.png")
-    
-    if (cat.race == 'Mercat') 
-    queue.push(`images/races/Mercat_${randomNumber(3) + 1}.png`)
+    if (cat.race == 'Elf' && cat.colour == 'Purple')
+    queue.push("images/races//Elf_purple.png")
+    if (cat.race == 'Elf' && cat.colour == 'Blue')
+    queue.push("images/races//Elf_blue.png")
+    if (cat.race == 'Elf' && cat.colour == 'Green')
+    queue.push("images/races//Elf_green.png")
 
+// objects in front
 
+    if (cat.class == 'Berserker') 
+    queue.push(`images/classes/Berserker_${randomNumber(3) + 1}.png`)
     if (cat.class == 'Mage') 
-    queue.push(`images/classes/Mage_${randomNumber(2) + 1}.png`)
+    queue.push(`images/classes/Mage_${randomNumber(5) + 1}.png`)
     if (cat.class == 'Necromancer') 
-    queue.push("images/classes//Necromancer.png")
+    queue.push(`images/classes/Necromancer_${randomNumber(3) + 1}.png`)
     if (cat.class == 'Witcher') 
     queue.push("images/classes//Witcher.png")
     if (cat.class == 'Archer') 
@@ -121,11 +150,22 @@ function generate() {
     if (cat.class == 'Thief') 
     queue.push(`images/classes/Thief_${randomNumber(4) + 1}.png`)
     if (cat.class == 'Healer') 
-    queue.push(`images/classes/Healer_${randomNumber(2) + 1}.png`)
+    queue.push(`images/classes/Healer_${randomNumber(3) + 1}.png`)
     if (cat.class == 'Cowcat') 
-    queue.push("images/classes//Cowcat.png")
+    queue.push(`images/classes/Cowcat_${randomNumber(3) + 1}.png`)
     if (cat.class == 'Bard') 
     queue.push(`images/classes/Bard_hat_${randomNumber(4) + 1}.png`)
+    if (cat.class == 'Warrior') 
+    queue.push(`images/classes/Warrior_helmet_${randomNumber(4) + 1}.png`)
+    if (cat.class == 'Druid') 
+    queue.push(`images/classes/Druid_${randomNumber(7) + 1}.png`)
+
+    if (cat.race == 'Mercat') 
+    queue.push(`images/races/Mercat_${randomNumber(3) + 1}.png`)
+
+// overlays
+
+    queue.push(`images/body/whiskers_${randomNumber(3) + 1}.png`)
 
     queue.push("images/watermark.png")
 
@@ -153,9 +193,9 @@ function makeCat() {
             nameSecond[randomNumber(12)],
             nameThird[randomNumber(76)]
         ],
-        class: classes[randomNumber(10)],
+        class: classes[randomNumber(11)],
         race: races[randomNumber(8)],
-        colour: colours[randomNumber(5)],
+        colour: colours[randomNumber(8)],
         origin: [
             placeName[randomNumber(32)],
             placeNameTwo[randomNumber(22)],
