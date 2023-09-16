@@ -10,15 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;300;400;500;600&family=Pirata+One&family=VT323&display=swap" rel="stylesheet" crossorigin="anonymous">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <!-- HTML Meta Tags -->
+        <title>Fantasy Cat Generator</title>
+        <meta name="description" content="Generate a dream cat">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://fantasycatgenerator.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Fantasy Cat Generator">
+        <meta property="og:description" content="Generate a dream cat">
+        <meta property="og:image" content="avatar.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="fantasycatgenerator.com">
+        <meta property="twitter:url" content="https://fantasycatgenerator.com/">
+        <meta name="twitter:title" content="Fantasy Cat Generator">
+        <meta name="twitter:description" content="Generate a dream cat">
+        <meta name="twitter:image" content="avatar.png">
+
+           
     <title>Fantasy Cat Generator</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 <body>
-    <h1>Fantasy Cat Generator</h1>
+
+        
+ <h1>Fantasy Cat Generator</h1> 
+
 
     <div class="flexcont">
         <div id="cat-container">
-            <canvas height="844" width="573" id="cat-canvas"></canvas>
+            <canvas height="844" width="573" id="cat-canvas">
+            </canvas>
             <div id="cat"></div>
             <article class="specs">
                 <div id="catclass"></div>
@@ -28,7 +53,7 @@
         <div id="loading-element" style="opacity: 0">
             <simple-loader></simple-loader>
         </div>
-
+        
     </div>
 
     <div class="flexcont" id="button" style="flex-direction: row;">
@@ -36,7 +61,12 @@
         <button class="button" role="button" id="generate-button">Generate</button>
     </div>
 
-    <h5>Copyright <a href="https://github.com/KaRat2137" target="_blank">Karolina Ratajczyk</a> 2023</h5>
+    <div class="flexcont" style="flex-direction: row;">
+        <img src="avatar.png" id="avatar">
+        <h5>Copyright <a href="https://github.com/KaRat2137" target="_blank">KaRat</a> 2023</h5>
+     </div>
+
+     <img src="cat.jpeg" height="1" style="opacity: 0;">
 
     <script src="script.js" type="module">
     </script>

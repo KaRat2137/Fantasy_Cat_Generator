@@ -10,17 +10,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;300;400;500;600&family=Pirata+One&family=VT323&display=swap" rel="stylesheet" crossorigin="anonymous">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <!-- HTML Meta Tags -->
+        <title>Fantasy Cat Generator</title>
+        <meta name="description" content="Generate a dream cat">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://fantasycatgenerator.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Fantasy Cat Generator">
+        <meta property="og:description" content="Generate a dream cat">
+        <meta property="og:image" content="avatar.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="fantasycatgenerator.com">
+        <meta property="twitter:url" content="https://fantasycatgenerator.com/">
+        <meta name="twitter:title" content="Fantasy Cat Generator">
+        <meta name="twitter:description" content="Generate a dream cat">
+        <meta name="twitter:image" content="avatar.png">
+
+           
     <title>Fantasy Cat Generator</title>
     <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAADM0lEQVQ4jZWSS0xcZQCFv//eeVyYOw/oDDJDQSIvR3lUBFuKFKIpbYTQEmM3QmKiMXFBXBmjscSdJpKYxqULJZp0JyEsanxkjLZpQE2rrQFKoOnAMA0dKMPcYeZy597fjRhd9kvO4my+xckRUkoelUB5xWxT5NmzpVLJFI8qqPBHZp6oPHbeVdIwhYGyu7vL9PT0wPsXL34phPAtLy1RHawfrfbXv6l7Q207Oztsb2+jecqON1Yd+/3JcM95xXIjVZuinXNEanOTzy5dGono+uxmdm9m9qvvjOZI13gqs8aemUG67cWwr2YdRwy6ZBlF0wAFyrRyHuTXc0oul+PHRKLQ19zstNYeHQ1Hj1wAKNgG67lF0g/X4m6hDbocjX0zCwJQJC7VjWHu3lRUReHXhYXCcja7FVNVzo48790p3Kc6UE/QG8G0iizcvYLlHFDuCSCFROIghKBYyv+p/LPNrZ+uXbsfampiYmKCk0OtVPoj1Fe04/MEsWWJG5vfY5i76N4QmkvHETb7B3u/KY7jANjlfv9+qKGB92YuMzrxGjVdHioDVXTVnqEm2IwjbW5v/czy1jwOFgUrx4FlJlyqqgLoRyKRiuFzIxhdT5HM7/H1xx8w9ckU316eJ179HBG9llT2Dg+MdTL3Uni9XoDTSmNjoz42Nvbq8NBQPDrYT2H2B1wHJQCqeru5mUyw47lDsLyS9tgp2mP9xIIN1Fe20l576nPX5OTk693d3VN1dXUcb+/gr+E0A0+3AaBaFnUfvYv5MMdAXTNXP71CWI8R1CI42FT4w6irq6t6T09PR0tLS/UzRx/nZGcXpxvizM3N0dfRiYHk5ZY23hh8iTOj/aymFrl3N2kAnmwxk3ZtbGwsmaZ5Hejw+Xyc8PlIJpOk02mi0SgfRqP/3jgcDtP34gkSicT1g5xckZBSgf1AIBCOx+PnQqEQAJqmEY1GOez/xbKs4u3FP16Zv3H1i7ffeesXNZPJyPHx8T0p5Qu9vb2Pud1uhBAIIbAsC03T/iewbdul6/rVzs7OWwBKNptlZWVlLRaLfVMsFgHyQghDUZS8qqp5KaUBHCYXi8UIBAIXDoV/A7VLSQTluCCRAAAAAElFTkSuQmCC">
-  <script type="module" crossorigin src="/assets/index-0687e519.js"></script>
-  <link rel="stylesheet" href="/assets/index-3be36058.css">
+  <script type="module" crossorigin src="/assets/index-402a6caf.js"></script>
+  <link rel="stylesheet" href="/assets/index-c370a227.css">
 </head>
 <body>
-    <h1>Fantasy Cat Generator</h1>
+
+        
+ <h1>Fantasy Cat Generator</h1> 
+
 
     <div class="flexcont">
         <div id="cat-container">
-            <canvas height="844" width="573" id="cat-canvas"></canvas>
+            <canvas height="844" width="573" id="cat-canvas">
+            </canvas>
             <div id="cat"></div>
             <article class="specs">
                 <div id="catclass"></div>
@@ -30,7 +55,7 @@
         <div id="loading-element" style="opacity: 0">
             <simple-loader></simple-loader>
         </div>
-
+        
     </div>
 
     <div class="flexcont" id="button" style="flex-direction: row;">
@@ -38,7 +63,12 @@
         <button class="button" role="button" id="generate-button">Generate</button>
     </div>
 
-    <h5>Copyright <a href="https://github.com/KaRat2137" target="_blank">Karolina Ratajczyk</a> 2023</h5>
+    <div class="flexcont" style="flex-direction: row;">
+        <img src="/assets/avatar-a2fc0890.png" id="avatar">
+        <h5>Copyright <a href="https://github.com/KaRat2137" target="_blank">KaRat</a> 2023</h5>
+     </div>
+
+     <img src="cat.jpeg" height="1" style="opacity: 0;">
 
     
 </body>
